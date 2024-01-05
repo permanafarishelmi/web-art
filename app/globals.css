@@ -25,3 +25,80 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.artwork {
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+.artwork img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artwork:hover {
+  transform: scale(1.1);
+}
+
+.artwork figcaption {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+.tengah {
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #414141, #0800ff);
+  -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% 100%; /* Menyesuaikan ukuran gradasi */
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: gradientAnimation 2s infinite alternate; /* Animasi gradasi */
+    transition: font-size 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efek transisi dengan cubic-bezier */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    75% {
+      background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.gradient-text:hover {
+  font-size: 50px; /* Ukuran font ketika di-hover */
+}
